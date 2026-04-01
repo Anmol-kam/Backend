@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const express = require("express");
+const {evenodd} = require("./Controller/usercontroller")
 
 const app = express();
 
@@ -13,3 +14,5 @@ mongoose.connect(mogourl)
 .catch(()=>console.log(` mongo db error${e}`))
 
 app.listen(port,() => {console.log(`Server is running on port ${port}  `)})
+
+console.log(evenodd(2));
